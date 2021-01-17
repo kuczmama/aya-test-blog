@@ -1,18 +1,87 @@
 body {
-    margin: 0 auto;
-    max-width: 50em;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.content {
     font-family: "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
     color: #555555;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    background-color: #f0ebeb;
+}
+
+.sidebar {
+    width: 100%;
+    background-color: #f0ebeb;
+}
+
+.header {
+    background-color: white;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0ebeb;
+    text-align: center;
+    color: rgb(238, 141, 114);
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
 h2,
 strong {
     color: #333;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    flex-grow: 1;
+    max-width: 40%;
+}
+
+.about-container {
+    margin: 2rem;
+    border: 1px solid #f0ebeb;
+    background-color: white;
+}
+
+.about-title {
+    background-color: #f89174;
+    padding: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-body {
+    padding: 1rem;
+}
+
+.card:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(202, 202, 202);
+}
+
+.card-text {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card-img {
+    width: 100%;
 }
 
 .nav {
@@ -36,7 +105,16 @@ strong {
 @media only screen and (max-width: 50em) {
     .nav {
         border-radius: 0;
-    }    
+    } 
+
+    .card {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    
 }
 
 .link {
